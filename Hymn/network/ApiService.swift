@@ -10,8 +10,10 @@ import Alamofire
 class ApiService {
     
     
-     func fetchData<T : Codable>(url: String, complition : @escaping (Swift.Result<T, Errors>) -> Void) {
-        AF.request(url, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: HTTPHeaders.default)
+    func fetchData<T : Codable>(url: String, method: HTTPMethod, complition : @escaping (Swift.Result<T, Errors>) -> Void) {
+        let endpoint = K.endpoint.BASE_URL + url
+        
+        AF.request(endpoint, method: method, parameters: nil, encoding: JSONEncoding.default, headers: HTTPHeaders.default)
             .validate(statusCode: 200..<300).responseJSON { response in
                 if let httpUrlResponse = response.response, 200..<300 ~= httpUrlResponse.statusCode {
                     guard let processData = response.data else {
@@ -23,9 +25,9 @@ class ApiService {
                         let decoder = JSONDecoder()
                         decoder.dataDecodingStrategy = .base64
                         complition(.success(try decoder.decode(T.self, from: processData)))
-                    } catch {
+                    } catch(let error) {
                         print(T.self)
-                        complition(.failure(Errors.emptyResponse))
+                        complition(.failure(Errors.apiError(error.localizedDescription)))
                     }
                 } else {
                     complition(.failure(Errors.emptyResponse))

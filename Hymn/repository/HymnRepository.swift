@@ -15,14 +15,13 @@ class HymnRepository {
     }
     
     func fetchHymns() {
-        let url = "http://hymn.devstart.co.ke/api/songs"
         
-        apiService.fetchData(url: url) { (response: Swift.Result<GeneralResponse<[Hymn]>, Errors>) in
+        apiService.fetchData(url: K.endpoint.songs, method: .get) { (response: Swift.Result<GeneralResponse<[Hymn]>, Errors>) in
             switch response {
                 case .success(let data) :
-                    print(data.message)
+                    print(data.data)
                 case .failure(let error) :
-                print(error)
+                    print("failiure response \(error.localizedDescription)")
             }
         }
     }

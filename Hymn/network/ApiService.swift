@@ -15,6 +15,7 @@ class ApiService {
         
         AF.request(endpoint, method: method, parameters: nil, encoding: JSONEncoding.default, headers: HTTPHeaders.default)
             .validate(statusCode: 200..<300).responseJSON { response in
+                
                 if let httpUrlResponse = response.response, 200..<300 ~= httpUrlResponse.statusCode {
                     guard let processData = response.data else {
                         complition(.failure(Errors.emptyResponse))

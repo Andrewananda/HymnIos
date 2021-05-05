@@ -14,6 +14,7 @@
 		587FDC372642CD2A0037E606 /* HymnRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587FDC362642CD2A0037E606 /* HymnRepository.swift */; };
 		587FDC392642CE230037E606 /* Hymn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587FDC382642CE230037E606 /* Hymn.swift */; };
 		587FDC3B2642D0490037E606 /* ApiResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587FDC3A2642D0490037E606 /* ApiResponse.swift */; };
+		587FDC3D26430EE10037E606 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587FDC3C26430EE10037E606 /* Constants.swift */; };
 		58B4FA76263E59BC00425DBC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B4FA75263E59BC00425DBC /* AppDelegate.swift */; };
 		58B4FA78263E59BC00425DBC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B4FA77263E59BC00425DBC /* SceneDelegate.swift */; };
 		58B4FA7A263E59BC00425DBC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B4FA79263E59BC00425DBC /* ViewController.swift */; };
@@ -55,6 +56,7 @@
 		587FDC362642CD2A0037E606 /* HymnRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HymnRepository.swift; sourceTree = "<group>"; };
 		587FDC382642CE230037E606 /* Hymn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hymn.swift; sourceTree = "<group>"; };
 		587FDC3A2642D0490037E606 /* ApiResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiResponse.swift; sourceTree = "<group>"; };
+		587FDC3C26430EE10037E606 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		58B4FA72263E59BC00425DBC /* Hymn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hymn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58B4FA75263E59BC00425DBC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		58B4FA77263E59BC00425DBC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -152,6 +154,14 @@
 			path = repository;
 			sourceTree = "<group>";
 		};
+		587FDC3E264310540037E606 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				587FDC3C26430EE10037E606 /* Constants.swift */,
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
 		58B4FA69263E59BC00425DBC = {
 			isa = PBXGroup;
 			children = (
@@ -177,6 +187,7 @@
 		58B4FA74263E59BC00425DBC /* Hymn */ = {
 			isa = PBXGroup;
 			children = (
+				587FDC3E264310540037E606 /* utils */,
 				587FDC352642CD1D0037E606 /* repository */,
 				587FDC322642CC7E0037E606 /* viewModel */,
 				587FDC2D2642A4EB0037E606 /* model */,
@@ -460,6 +471,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				58B4FA7A263E59BC00425DBC /* ViewController.swift in Sources */,
+				587FDC3D26430EE10037E606 /* Constants.swift in Sources */,
 				587FDC2C2642A36D0037E606 /* ApiService.swift in Sources */,
 				58B4FA80263E59BC00425DBC /* Hymn.xcdatamodeld in Sources */,
 				587FDC3B2642D0490037E606 /* ApiResponse.swift in Sources */,

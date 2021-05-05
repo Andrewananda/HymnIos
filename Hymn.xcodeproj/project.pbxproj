@@ -3,10 +3,17 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		312AA8956B79897178F03F1B /* Pods_Hymn_HymnUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E54F2D81F16F2112A5D9AB6 /* Pods_Hymn_HymnUITests.framework */; };
+		587FDC2C2642A36D0037E606 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587FDC2B2642A36D0037E606 /* ApiService.swift */; };
+		587FDC312642CBB20037E606 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587FDC302642CBB20037E606 /* Errors.swift */; };
+		587FDC342642CC9C0037E606 /* HymnViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587FDC332642CC9C0037E606 /* HymnViewModel.swift */; };
+		587FDC372642CD2A0037E606 /* HymnRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587FDC362642CD2A0037E606 /* HymnRepository.swift */; };
+		587FDC392642CE230037E606 /* Hymn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587FDC382642CE230037E606 /* Hymn.swift */; };
+		587FDC3B2642D0490037E606 /* ApiResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587FDC3A2642D0490037E606 /* ApiResponse.swift */; };
 		58B4FA76263E59BC00425DBC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B4FA75263E59BC00425DBC /* AppDelegate.swift */; };
 		58B4FA78263E59BC00425DBC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B4FA77263E59BC00425DBC /* SceneDelegate.swift */; };
 		58B4FA7A263E59BC00425DBC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B4FA79263E59BC00425DBC /* ViewController.swift */; };
@@ -16,6 +23,8 @@
 		58B4FA85263E59BE00425DBC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58B4FA83263E59BE00425DBC /* LaunchScreen.storyboard */; };
 		58B4FA90263E59BF00425DBC /* HymnTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B4FA8F263E59BF00425DBC /* HymnTests.swift */; };
 		58B4FA9B263E59BF00425DBC /* HymnUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B4FA9A263E59BF00425DBC /* HymnUITests.swift */; };
+		ACFA89DBBA9DDF3C30AE03C8 /* Pods_HymnTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0B26B26A26AF238D0C94161 /* Pods_HymnTests.framework */; };
+		F21CDCAA70F0647731A46F90 /* Pods_Hymn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36C804F902275BFEA7DECD74 /* Pods_Hymn.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +45,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2796DE92A708C45106C1CA84 /* Pods-Hymn-HymnUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hymn-HymnUITests.release.xcconfig"; path = "Target Support Files/Pods-Hymn-HymnUITests/Pods-Hymn-HymnUITests.release.xcconfig"; sourceTree = "<group>"; };
+		2D091821A224B90A3232E750 /* Pods-Hymn.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hymn.release.xcconfig"; path = "Target Support Files/Pods-Hymn/Pods-Hymn.release.xcconfig"; sourceTree = "<group>"; };
+		36C804F902275BFEA7DECD74 /* Pods_Hymn.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hymn.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4ADCC29F961BC4F214452A69 /* Pods-Hymn.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hymn.debug.xcconfig"; path = "Target Support Files/Pods-Hymn/Pods-Hymn.debug.xcconfig"; sourceTree = "<group>"; };
+		587FDC2B2642A36D0037E606 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
+		587FDC302642CBB20037E606 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
+		587FDC332642CC9C0037E606 /* HymnViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HymnViewModel.swift; sourceTree = "<group>"; };
+		587FDC362642CD2A0037E606 /* HymnRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HymnRepository.swift; sourceTree = "<group>"; };
+		587FDC382642CE230037E606 /* Hymn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hymn.swift; sourceTree = "<group>"; };
+		587FDC3A2642D0490037E606 /* ApiResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiResponse.swift; sourceTree = "<group>"; };
 		58B4FA72263E59BC00425DBC /* Hymn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hymn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58B4FA75263E59BC00425DBC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		58B4FA77263E59BC00425DBC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +70,11 @@
 		58B4FA96263E59BF00425DBC /* HymnUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HymnUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		58B4FA9A263E59BF00425DBC /* HymnUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HymnUITests.swift; sourceTree = "<group>"; };
 		58B4FA9C263E59BF00425DBC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7630929A7F0C25DF8E94EA7F /* Pods-Hymn-HymnUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hymn-HymnUITests.debug.xcconfig"; path = "Target Support Files/Pods-Hymn-HymnUITests/Pods-Hymn-HymnUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		8E54F2D81F16F2112A5D9AB6 /* Pods_Hymn_HymnUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hymn_HymnUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA3DB97D04448A9B63D94853 /* Pods-HymnTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HymnTests.release.xcconfig"; path = "Target Support Files/Pods-HymnTests/Pods-HymnTests.release.xcconfig"; sourceTree = "<group>"; };
+		C0B26B26A26AF238D0C94161 /* Pods_HymnTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HymnTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF6D3546022651D7FE7DA9F0 /* Pods-HymnTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HymnTests.debug.xcconfig"; path = "Target Support Files/Pods-HymnTests/Pods-HymnTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F21CDCAA70F0647731A46F90 /* Pods_Hymn.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACFA89DBBA9DDF3C30AE03C8 /* Pods_HymnTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,12 +98,60 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				312AA8956B79897178F03F1B /* Pods_Hymn_HymnUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		541C2D092F478F65AA959B77 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4ADCC29F961BC4F214452A69 /* Pods-Hymn.debug.xcconfig */,
+				2D091821A224B90A3232E750 /* Pods-Hymn.release.xcconfig */,
+				7630929A7F0C25DF8E94EA7F /* Pods-Hymn-HymnUITests.debug.xcconfig */,
+				2796DE92A708C45106C1CA84 /* Pods-Hymn-HymnUITests.release.xcconfig */,
+				DF6D3546022651D7FE7DA9F0 /* Pods-HymnTests.debug.xcconfig */,
+				BA3DB97D04448A9B63D94853 /* Pods-HymnTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		587FDC2A2642A3560037E606 /* network */ = {
+			isa = PBXGroup;
+			children = (
+				587FDC2B2642A36D0037E606 /* ApiService.swift */,
+				587FDC302642CBB20037E606 /* Errors.swift */,
+				587FDC3A2642D0490037E606 /* ApiResponse.swift */,
+			);
+			path = network;
+			sourceTree = "<group>";
+		};
+		587FDC2D2642A4EB0037E606 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				587FDC382642CE230037E606 /* Hymn.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		587FDC322642CC7E0037E606 /* viewModel */ = {
+			isa = PBXGroup;
+			children = (
+				587FDC332642CC9C0037E606 /* HymnViewModel.swift */,
+			);
+			path = viewModel;
+			sourceTree = "<group>";
+		};
+		587FDC352642CD1D0037E606 /* repository */ = {
+			isa = PBXGroup;
+			children = (
+				587FDC362642CD2A0037E606 /* HymnRepository.swift */,
+			);
+			path = repository;
+			sourceTree = "<group>";
+		};
 		58B4FA69263E59BC00425DBC = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +159,8 @@
 				58B4FA8E263E59BF00425DBC /* HymnTests */,
 				58B4FA99263E59BF00425DBC /* HymnUITests */,
 				58B4FA73263E59BC00425DBC /* Products */,
+				541C2D092F478F65AA959B77 /* Pods */,
+				6318484B9649C6434978CDFE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,6 +177,10 @@
 		58B4FA74263E59BC00425DBC /* Hymn */ = {
 			isa = PBXGroup;
 			children = (
+				587FDC352642CD1D0037E606 /* repository */,
+				587FDC322642CC7E0037E606 /* viewModel */,
+				587FDC2D2642A4EB0037E606 /* model */,
+				587FDC2A2642A3560037E606 /* network */,
 				58B4FA75263E59BC00425DBC /* AppDelegate.swift */,
 				58B4FA77263E59BC00425DBC /* SceneDelegate.swift */,
 				58B4FA79263E59BC00425DBC /* ViewController.swift */,
@@ -131,6 +211,16 @@
 			path = HymnUITests;
 			sourceTree = "<group>";
 		};
+		6318484B9649C6434978CDFE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				36C804F902275BFEA7DECD74 /* Pods_Hymn.framework */,
+				8E54F2D81F16F2112A5D9AB6 /* Pods_Hymn_HymnUITests.framework */,
+				C0B26B26A26AF238D0C94161 /* Pods_HymnTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,9 +228,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 58B4FA9F263E59BF00425DBC /* Build configuration list for PBXNativeTarget "Hymn" */;
 			buildPhases = (
+				229EFE4C77F08D4F84431513 /* [CP] Check Pods Manifest.lock */,
 				58B4FA6E263E59BC00425DBC /* Sources */,
 				58B4FA6F263E59BC00425DBC /* Frameworks */,
 				58B4FA70263E59BC00425DBC /* Resources */,
+				7E29F4969FF438447C48178E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -155,6 +247,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 58B4FAA2263E59BF00425DBC /* Build configuration list for PBXNativeTarget "HymnTests" */;
 			buildPhases = (
+				BC717228AFE0E227A3AEC093 /* [CP] Check Pods Manifest.lock */,
 				58B4FA87263E59BF00425DBC /* Sources */,
 				58B4FA88263E59BF00425DBC /* Frameworks */,
 				58B4FA89263E59BF00425DBC /* Resources */,
@@ -173,9 +266,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 58B4FAA5263E59BF00425DBC /* Build configuration list for PBXNativeTarget "HymnUITests" */;
 			buildPhases = (
+				429EF4327758B11102426976 /* [CP] Check Pods Manifest.lock */,
 				58B4FA92263E59BF00425DBC /* Sources */,
 				58B4FA93263E59BF00425DBC /* Frameworks */,
 				58B4FA94263E59BF00425DBC /* Resources */,
+				2832347A4FA2DA465E4C1C3E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -256,15 +351,124 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		229EFE4C77F08D4F84431513 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Hymn-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2832347A4FA2DA465E4C1C3E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Hymn-HymnUITests/Pods-Hymn-HymnUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Hymn-HymnUITests/Pods-Hymn-HymnUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Hymn-HymnUITests/Pods-Hymn-HymnUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		429EF4327758B11102426976 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Hymn-HymnUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7E29F4969FF438447C48178E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Hymn/Pods-Hymn-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Hymn/Pods-Hymn-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Hymn/Pods-Hymn-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BC717228AFE0E227A3AEC093 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HymnTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		58B4FA6E263E59BC00425DBC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				58B4FA7A263E59BC00425DBC /* ViewController.swift in Sources */,
+				587FDC2C2642A36D0037E606 /* ApiService.swift in Sources */,
 				58B4FA80263E59BC00425DBC /* Hymn.xcdatamodeld in Sources */,
+				587FDC3B2642D0490037E606 /* ApiResponse.swift in Sources */,
+				587FDC372642CD2A0037E606 /* HymnRepository.swift in Sources */,
 				58B4FA76263E59BC00425DBC /* AppDelegate.swift in Sources */,
+				587FDC342642CC9C0037E606 /* HymnViewModel.swift in Sources */,
 				58B4FA78263E59BC00425DBC /* SceneDelegate.swift in Sources */,
+				587FDC312642CBB20037E606 /* Errors.swift in Sources */,
+				587FDC392642CE230037E606 /* Hymn.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,6 +641,7 @@
 		};
 		58B4FAA0263E59BF00425DBC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4ADCC29F961BC4F214452A69 /* Pods-Hymn.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -455,6 +660,7 @@
 		};
 		58B4FAA1263E59BF00425DBC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2D091821A224B90A3232E750 /* Pods-Hymn.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -473,6 +679,7 @@
 		};
 		58B4FAA3263E59BF00425DBC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DF6D3546022651D7FE7DA9F0 /* Pods-HymnTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -494,6 +701,7 @@
 		};
 		58B4FAA4263E59BF00425DBC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BA3DB97D04448A9B63D94853 /* Pods-HymnTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -515,6 +723,7 @@
 		};
 		58B4FAA6263E59BF00425DBC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7630929A7F0C25DF8E94EA7F /* Pods-Hymn-HymnUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -534,6 +743,7 @@
 		};
 		58B4FAA7263E59BF00425DBC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2796DE92A708C45106C1CA84 /* Pods-Hymn-HymnUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

@@ -17,6 +17,9 @@ class ViewController: UIViewController {
     private let viewModel =  HymnViewModel()
     private let bag = DisposeBag()
     
+    private var selectedHymn: Hymn?
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -35,13 +38,21 @@ class ViewController: UIViewController {
             cell.chorus.text = item.chorus
         }.disposed(by: bag)
         
-        tableView.rx.modelSelected(Hymn.self).subscribe(onNext: { item in
-            print("selected \(item.title)")
+        tableView.rx.modelSelected(Hymn.self).subscribe(onNext: {[weak self] item in
+            self?.selectedHymn = item
+            self?.performSegue(withIdentifier: K.segueIdentifier.hymnSegue, sender: self)
         }).disposed(by: bag)
         
         viewModel.fetchHymns()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == K.segueIdentifier.hymnSegue {
+            let vc = segue.destination as! HymnViewController
+            vc.titleLabel = selectedHymn?.title
+            vc.hymnSong = selectedHymn?.song
+        }
+    }
     
     private func showLoading() {
         viewModel.showLoading.subscribe(onNext: {[weak self] value in
@@ -51,7 +62,7 @@ class ViewController: UIViewController {
                 self?.loadingIndicator.stopAnimating()
                 self?.loadingIndicator.hidesWhenStopped = true
             }
-        })
+        }).disposed(by: bag)
     }
 
 }

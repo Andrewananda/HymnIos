@@ -17,6 +17,7 @@
 		587FDC3D26430EE10037E606 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587FDC3C26430EE10037E606 /* Constants.swift */; };
 		587FDC432643B33F0037E606 /* HymnTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587FDC412643B33F0037E606 /* HymnTableCell.swift */; };
 		587FDC442643B33F0037E606 /* HymnTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 587FDC422643B33F0037E606 /* HymnTableCell.xib */; };
+		587FDC462643C9100037E606 /* HymnViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587FDC452643C9100037E606 /* HymnViewController.swift */; };
 		58B4FA76263E59BC00425DBC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B4FA75263E59BC00425DBC /* AppDelegate.swift */; };
 		58B4FA78263E59BC00425DBC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B4FA77263E59BC00425DBC /* SceneDelegate.swift */; };
 		58B4FA7A263E59BC00425DBC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B4FA79263E59BC00425DBC /* ViewController.swift */; };
@@ -61,6 +62,7 @@
 		587FDC3C26430EE10037E606 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		587FDC412643B33F0037E606 /* HymnTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HymnTableCell.swift; sourceTree = "<group>"; };
 		587FDC422643B33F0037E606 /* HymnTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HymnTableCell.xib; sourceTree = "<group>"; };
+		587FDC452643C9100037E606 /* HymnViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HymnViewController.swift; sourceTree = "<group>"; };
 		58B4FA72263E59BC00425DBC /* Hymn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hymn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58B4FA75263E59BC00425DBC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		58B4FA77263E59BC00425DBC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -172,6 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				58B4FA79263E59BC00425DBC /* ViewController.swift */,
+				587FDC452643C9100037E606 /* HymnViewController.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -490,6 +493,7 @@
 				587FDC2C2642A36D0037E606 /* ApiService.swift in Sources */,
 				58B4FA80263E59BC00425DBC /* Hymn.xcdatamodeld in Sources */,
 				587FDC3B2642D0490037E606 /* ApiResponse.swift in Sources */,
+				587FDC462643C9100037E606 /* HymnViewController.swift in Sources */,
 				587FDC372642CD2A0037E606 /* HymnRepository.swift in Sources */,
 				587FDC432643B33F0037E606 /* HymnTableCell.swift in Sources */,
 				58B4FA76263E59BC00425DBC /* AppDelegate.swift in Sources */,

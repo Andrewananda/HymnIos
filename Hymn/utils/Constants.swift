@@ -16,4 +16,7 @@ struct K {
         static let hymnCellIdentifier = "hymnTableCell"
         static let hymnTableCell = "HymnTableCell"
     }
+    struct segueIdentifier {
+        static let hymnSegue = "HymnViewController"
+    }
 }

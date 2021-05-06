@@ -9,10 +9,10 @@ import Foundation
 
 struct Hymn: Codable {
     let id: Int
-    let title: String
+    var title: String
     let songNumber: Int
     let chorus: String
-    let song: String
+    var song: String
     let categoryId: Int
     let createdAt: String?
     let updatedAt: String

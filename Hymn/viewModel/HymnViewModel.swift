@@ -11,10 +11,10 @@ import RxSwift
 class HymnViewModel {
     private let hymnRepository: HymnRepository
     
-     var hymnSubject = PublishSubject<[Hymn]>()
-    var hymnObservable : Observable<[Hymn]> {
-        hymnSubject as Observable
-    }
+     var hymns = PublishSubject<[Hymn]>()
+//    var hymnObservable : Observable<[Hymn]> {
+//        hymnSubject as Observable
+//    }
     
     init() {
         self.hymnRepository = HymnRepository()
@@ -23,7 +23,7 @@ class HymnViewModel {
     
     func fetchHymns() {
         hymnRepository.hymnLiveData.subscribe(onNext: { [weak self] hymnData in
-            self?.hymnSubject.onNext(hymnData)
+            self?.hymns.onNext(hymnData)
         })
         hymnRepository.fetchHymns()
     }

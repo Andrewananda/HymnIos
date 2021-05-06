@@ -10,13 +10,25 @@ import Foundation
 struct Hymn: Codable {
     let id: Int
     let title: String
-    let songNumber: Int?
+    let songNumber: Int
     let chorus: String
     let song: String
-    let category_id: Int
-    let created_at: String
-    let updated_at: String
+    let categoryId: Int
+    let createdAt: String?
+    let updatedAt: String
     var category: Category?
+    
+    enum CodingKeys: String, CodingKey {
+        case id
+        case title
+        case songNumber = "number"
+        case chorus
+        case song
+        case categoryId = "category_id"
+        case createdAt = "created_at"
+        case updatedAt = "updated_at"
+        case category
+    }
 }
 
 struct Category: Codable {

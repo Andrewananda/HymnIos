@@ -12,4 +12,8 @@ struct K {
         static let BASE_URL = "http://hymn.devstart.co.ke/api/"
         static let songs = "songs"
     }
+    struct tableCells {
+        static let hymnCellIdentifier = "hymnTableCell"
+        static let hymnTableCell = "HymnTableCell"
+    }
 }

@@ -9,8 +9,9 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class ViewController: UIViewController {
-        
+class ViewController: UIViewController, UITableViewDelegate {
+    
+    @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     
@@ -24,7 +25,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         showLoading()
-        tableView.rx.setDelegate(self)
+        tableView.rx.setDelegate(self).disposed(by: bag)
+        searchBar.delegate = self
         bindTableView()
     }
     
@@ -64,12 +66,27 @@ class ViewController: UIViewController {
             }
         }).disposed(by: bag)
     }
-
-}
-
-extension ViewController: UITableViewDelegate {
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 65
+        return 64
     }
 }
 
+extension ViewController: UISearchBarDelegate {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        guard let hymnTitle = searchBar.text else {return}
+        searchHymn(for: hymnTitle)
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.text = nil
+        searchBar.resignFirstResponder()
+    }
+    
+}
+
+extension ViewController {
+    private func searchHymn(for name: String) {
+        print("HymnTitle \(name)")
+    }
+}

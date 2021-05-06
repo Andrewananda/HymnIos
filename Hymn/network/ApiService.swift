@@ -10,7 +10,7 @@ import Alamofire
 class ApiService {
     
     
-    func fetchData<T : Codable>(url: String, method: HTTPMethod, complition : @escaping (Swift.Result<T, Errors>) -> Void) {
+    func fetchData<T : Codable>(url: String, method: HTTPMethod, complition : @escaping (Result<T, Errors>) -> Void) {
         let endpoint = K.endpoint.BASE_URL + url
         
         AF.request(endpoint, method: method, parameters: nil, encoding: JSONEncoding.default, headers: HTTPHeaders.default)

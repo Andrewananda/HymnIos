@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Hymns-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Hymn" customModuleProvider="target" sceneMemberID="viewController">
@@ -22,6 +22,11 @@
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="l9B-CA-VFz">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="774"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <searchBar key="tableHeaderView" contentMode="redraw" placeholder="Search Hymn" showsCancelButton="YES" id="mkl-sw-HPR">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </searchBar>
                                     </tableView>
                                     <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" restorationIdentifier="loadingIndicator" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="M88-CS-oa2">
                                         <rect key="frame" x="188.5" y="368.5" width="37" height="37"/>
@@ -47,9 +52,10 @@
                             <constraint firstItem="pnF-mr-JMZ" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="kWJ-Un-zMH"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="NlP-Ru-ddx"/>
+                    <navigationItem key="navigationItem" title="Hymns" id="NlP-Ru-ddx"/>
                     <connections>
                         <outlet property="loadingIndicator" destination="M88-CS-oa2" id="7o7-xK-0OC"/>
+                        <outlet property="searchBar" destination="mkl-sw-HPR" id="1Ai-eD-cwg"/>
                         <outlet property="tableView" destination="l9B-CA-VFz" id="U6R-nF-Vv9"/>
                         <segue destination="A8X-gY-8kv" kind="show" identifier="HymnViewController" id="yje-gm-F5G"/>
                     </connections>
@@ -67,16 +73,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="63t-mM-MUK">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="140" width="414" height="722"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="7qx-JD-O1B">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="774"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="722"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1pg-ne-yRw">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="774"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="722"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LlF-5W-dwg">
-                                                        <rect key="frame" x="10" y="10" width="394" height="20.5"/>
+                                                        <rect key="frame" x="10" y="5" width="394" height="20.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -85,7 +91,7 @@
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstItem="LlF-5W-dwg" firstAttribute="leading" secondItem="1pg-ne-yRw" secondAttribute="leading" constant="10" id="LPJ-rc-yEY"/>
-                                                    <constraint firstItem="LlF-5W-dwg" firstAttribute="top" secondItem="1pg-ne-yRw" secondAttribute="top" constant="10" id="QCx-ZO-fdy"/>
+                                                    <constraint firstItem="LlF-5W-dwg" firstAttribute="top" secondItem="1pg-ne-yRw" secondAttribute="top" constant="5" id="QCx-ZO-fdy"/>
                                                     <constraint firstAttribute="trailing" secondItem="LlF-5W-dwg" secondAttribute="trailing" constant="10" id="WO1-Kg-ldJ"/>
                                                 </constraints>
                                             </view>
@@ -136,8 +142,8 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WVC-i1-LZy" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="CUV-EP-4E9">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="CUV-EP-4E9">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

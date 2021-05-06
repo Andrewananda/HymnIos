@@ -20,7 +20,7 @@ class HymnViewController: UIViewController {
     
 
     private func setDescription() {
-        title = titleLabel
+//        title = titleLabel
         let song = hymnSong?.replacingOccurrences(of: "<[^>]+>", with: "", options: .regularExpression, range: nil)
         hymnLabel.text = song
     }

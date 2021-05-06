@@ -12,19 +12,22 @@ import RxCocoa
 class ViewController: UIViewController {
         
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     
     private let viewModel =  HymnViewModel()
     private let bag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        showLoading()
         tableView.rx.setDelegate(self)
         bindTableView()
     }
     
     private func bindTableView() {
         tableView.register(UINib(nibName: K.tableCells.hymnTableCell, bundle: nil), forCellReuseIdentifier: K.tableCells.hymnCellIdentifier)
+        
         viewModel.hymns.bind(to: tableView.rx.items(cellIdentifier: K.tableCells.hymnCellIdentifier, cellType: HymnTableCell.self)) {
             (row, item, cell) in
             cell.title.text = item.title
@@ -37,6 +40,18 @@ class ViewController: UIViewController {
         }).disposed(by: bag)
         
         viewModel.fetchHymns()
+    }
+    
+    
+    private func showLoading() {
+        viewModel.showLoading.subscribe(onNext: {[weak self] value in
+            if(value) {
+                self?.loadingIndicator.startAnimating()
+            } else {
+                self?.loadingIndicator.stopAnimating()
+                self?.loadingIndicator.hidesWhenStopped = true
+            }
+        })
     }
 
 }

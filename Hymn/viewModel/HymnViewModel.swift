@@ -7,14 +7,13 @@
 
 import Foundation
 import RxSwift
+import RxRelay
 
 class HymnViewModel {
     private let hymnRepository: HymnRepository
     
      var hymns = PublishSubject<[Hymn]>()
-//    var hymnObservable : Observable<[Hymn]> {
-//        hymnSubject as Observable
-//    }
+     var showLoading = BehaviorRelay<Bool>(value: true)
     
     init() {
         self.hymnRepository = HymnRepository()
@@ -24,6 +23,7 @@ class HymnViewModel {
     func fetchHymns() {
         hymnRepository.hymnLiveData.subscribe(onNext: { [weak self] hymnData in
             self?.hymns.onNext(hymnData)
+            self?.showLoading.accept(false)
         })
         hymnRepository.fetchHymns()
     }

@@ -15,6 +15,8 @@
 		587FDC392642CE230037E606 /* Hymn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587FDC382642CE230037E606 /* Hymn.swift */; };
 		587FDC3B2642D0490037E606 /* ApiResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587FDC3A2642D0490037E606 /* ApiResponse.swift */; };
 		587FDC3D26430EE10037E606 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587FDC3C26430EE10037E606 /* Constants.swift */; };
+		587FDC432643B33F0037E606 /* HymnTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587FDC412643B33F0037E606 /* HymnTableCell.swift */; };
+		587FDC442643B33F0037E606 /* HymnTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 587FDC422643B33F0037E606 /* HymnTableCell.xib */; };
 		58B4FA76263E59BC00425DBC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B4FA75263E59BC00425DBC /* AppDelegate.swift */; };
 		58B4FA78263E59BC00425DBC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B4FA77263E59BC00425DBC /* SceneDelegate.swift */; };
 		58B4FA7A263E59BC00425DBC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B4FA79263E59BC00425DBC /* ViewController.swift */; };
@@ -57,6 +59,8 @@
 		587FDC382642CE230037E606 /* Hymn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hymn.swift; sourceTree = "<group>"; };
 		587FDC3A2642D0490037E606 /* ApiResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiResponse.swift; sourceTree = "<group>"; };
 		587FDC3C26430EE10037E606 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		587FDC412643B33F0037E606 /* HymnTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HymnTableCell.swift; sourceTree = "<group>"; };
+		587FDC422643B33F0037E606 /* HymnTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HymnTableCell.xib; sourceTree = "<group>"; };
 		58B4FA72263E59BC00425DBC /* Hymn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hymn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58B4FA75263E59BC00425DBC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		58B4FA77263E59BC00425DBC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -158,8 +162,18 @@
 			isa = PBXGroup;
 			children = (
 				587FDC3C26430EE10037E606 /* Constants.swift */,
+				587FDC412643B33F0037E606 /* HymnTableCell.swift */,
+				587FDC422643B33F0037E606 /* HymnTableCell.xib */,
 			);
 			path = utils;
+			sourceTree = "<group>";
+		};
+		587FDC3F2643B2DE0037E606 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				58B4FA79263E59BC00425DBC /* ViewController.swift */,
+			);
+			path = views;
 			sourceTree = "<group>";
 		};
 		58B4FA69263E59BC00425DBC = {
@@ -187,6 +201,7 @@
 		58B4FA74263E59BC00425DBC /* Hymn */ = {
 			isa = PBXGroup;
 			children = (
+				587FDC3F2643B2DE0037E606 /* views */,
 				587FDC3E264310540037E606 /* utils */,
 				587FDC352642CD1D0037E606 /* repository */,
 				587FDC322642CC7E0037E606 /* viewModel */,
@@ -194,7 +209,6 @@
 				587FDC2A2642A3560037E606 /* network */,
 				58B4FA75263E59BC00425DBC /* AppDelegate.swift */,
 				58B4FA77263E59BC00425DBC /* SceneDelegate.swift */,
-				58B4FA79263E59BC00425DBC /* ViewController.swift */,
 				58B4FA7B263E59BC00425DBC /* Main.storyboard */,
 				58B4FA81263E59BE00425DBC /* Assets.xcassets */,
 				58B4FA83263E59BE00425DBC /* LaunchScreen.storyboard */,
@@ -342,6 +356,7 @@
 			files = (
 				58B4FA85263E59BE00425DBC /* LaunchScreen.storyboard in Resources */,
 				58B4FA82263E59BE00425DBC /* Assets.xcassets in Resources */,
+				587FDC442643B33F0037E606 /* HymnTableCell.xib in Resources */,
 				58B4FA7D263E59BC00425DBC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -476,6 +491,7 @@
 				58B4FA80263E59BC00425DBC /* Hymn.xcdatamodeld in Sources */,
 				587FDC3B2642D0490037E606 /* ApiResponse.swift in Sources */,
 				587FDC372642CD2A0037E606 /* HymnRepository.swift in Sources */,
+				587FDC432643B33F0037E606 /* HymnTableCell.swift in Sources */,
 				58B4FA76263E59BC00425DBC /* AppDelegate.swift in Sources */,
 				587FDC342642CC9C0037E606 /* HymnViewModel.swift in Sources */,
 				58B4FA78263E59BC00425DBC /* SceneDelegate.swift in Sources */,

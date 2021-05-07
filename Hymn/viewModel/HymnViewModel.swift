@@ -12,7 +12,11 @@ import RxRelay
 class HymnViewModel {
     private let hymnRepository: HymnRepository
     
-     var hymns = PublishSubject<[Hymn]>()
+     private let hymns = PublishSubject<[Hymn]>()
+    var hymnObservable: Observable<[Hymn]> {
+        return hymns.asObserver()
+    }
+    
      var showLoading = BehaviorRelay<Bool>(value: true)
     
     init() {

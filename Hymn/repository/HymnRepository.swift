@@ -19,7 +19,7 @@ class HymnRepository {
     
     func fetchHymns() {
         
-        apiService.fetchData(url: K.endpoint.songs, method: .get) {
+        apiService.fetchData(url: K.endpoint.songs, method: .get, params: nil) {
             (response: Swift.Result<GeneralResponse<[Hymn]>, Errors>) in
             
             switch response {
@@ -29,5 +29,19 @@ class HymnRepository {
                     print("failiure response \(error.localizedDescription)")
             }
         }
+    }
+    
+    func searchHymn(value: String?) {
+        apiService.fetchData(url: K.endpoint.search, method: .post, params: ["value": value]) {
+            (response: Swift.Result<GeneralResponse<[Hymn]>, Errors>) in
+            switch response {
+            case.success(let data) :
+                self.hymnLiveData.accept(data.data)
+            case .failure(let error):
+            print("Failiure res \(error.localizedDescription)")
+            }
+        }
+        
+        
     }
 }

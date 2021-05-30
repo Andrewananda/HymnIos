@@ -12,17 +12,20 @@ class HymnViewController: UIViewController {
      var titleLabel: String?
     var hymnSong: String?
     
+    let viewModel = HymnViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        setDescription()
+        displayDescription(with: hymnSong)
     }
     
 
-    private func setDescription() {
-//        title = titleLabel
-        let song = hymnSong?.replacingOccurrences(of: "<[^>]+>", with: "", options: .regularExpression, range: nil)
+    private func displayDescription(with song: String?) {
+        let song = viewModel.filterString(string: song)
+        
         hymnLabel.text = song
     }
+    
 
 }

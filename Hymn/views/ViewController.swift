@@ -87,6 +87,7 @@ extension ViewController: UISearchBarDelegate {
 
 extension ViewController {
     private func searchHymn(for name: String) {
-        print("HymnTitle \(name)")
+        self.loadingIndicator.startAnimating()
+        viewModel.searchHymn(value: name)
     }
 }

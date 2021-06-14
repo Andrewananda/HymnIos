@@ -17,6 +17,8 @@ class HymnViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        navigationItem.largeTitleDisplayMode = .never
+        title = titleLabel
         displayDescription(with: hymnSong)
     }
     

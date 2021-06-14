@@ -37,7 +37,6 @@ class HymnViewModel {
             self?.hymns.onNext(hymnData)
             self?.showLoading.accept(false)
         })
-        print("Value \(value)")
         hymnRepository.searchHymn(value: value)
     }
     

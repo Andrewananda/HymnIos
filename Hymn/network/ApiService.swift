@@ -9,11 +9,10 @@ import Alamofire
 
 class ApiService {
     
-    
-    func fetchData<T : Codable>(url: String, method: HTTPMethod, complition : @escaping (Result<T, Errors>) -> Void) {
+     func fetchData<T : Codable>(url: String, method: HTTPMethod, params: [String:Any]?, complition : @escaping (Result<T, Errors>) -> Void) {
         let endpoint = K.endpoint.BASE_URL + url
         
-        AF.request(endpoint, method: method, parameters: nil, encoding: JSONEncoding.default, headers: HTTPHeaders.default)
+        AF.request(endpoint, method: method, parameters: params, encoding: JSONEncoding.default, headers: HTTPHeaders.default)
             .validate(statusCode: 200..<300).responseJSON { response in
                 
                 if let httpUrlResponse = response.response, 200..<300 ~= httpUrlResponse.statusCode {

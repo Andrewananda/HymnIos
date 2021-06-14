@@ -31,4 +31,17 @@ class HymnViewModel {
         })
         hymnRepository.fetchHymns()
     }
+    
+    func searchHymn(value: String) {
+        hymnRepository.hymnLiveData.subscribe(onNext: {[weak self] hymnData in
+            self?.hymns.onNext(hymnData)
+            self?.showLoading.accept(false)
+        })
+        hymnRepository.searchHymn(value: value)
+    }
+    
+    func filterString(string: String?) -> String {
+        let value = string?.replacingOccurrences(of: "<[^>]+>", with: "", options: .regularExpression, range: nil)
+        return value!
+    }
 }

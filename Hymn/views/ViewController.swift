@@ -33,7 +33,7 @@ class ViewController: UIViewController, UITableViewDelegate {
     private func bindTableView() {
         tableView.register(UINib(nibName: K.tableCells.hymnTableCell, bundle: nil), forCellReuseIdentifier: K.tableCells.hymnCellIdentifier)
         
-        viewModel.hymnObservable.bind(to: tableView.rx.items(cellIdentifier: K.tableCells.hymnCellIdentifier, cellType: HymnTableCell.self)) {
+        viewModel.hymnObservable.bind(to: tableView.rx.items(cellIdentifier: K.tableCells.hymnCellIdentifier, cellType: HymnTableCell.self)) { [self]
             (row, item, cell) in
             cell.title.text = item.title
             cell.hymnNumber.text = String(item.songNumber)
@@ -87,6 +87,7 @@ extension ViewController: UISearchBarDelegate {
 
 extension ViewController {
     private func searchHymn(for name: String) {
-        print("HymnTitle \(name)")
+        self.loadingIndicator.startAnimating()
+        viewModel.searchHymn(value: name)
     }
 }
